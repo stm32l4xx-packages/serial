@@ -27,7 +27,7 @@ void Serial::begin(uint8_t n_uart,uint32_t baudrate){
 
 	 if(HAL_UART_Receive_IT(huart, (uint8_t *)aRxBuffer, RXBUFFERSIZE) != HAL_OK)
 	 {
-		 printf("USARTLP: error while initing  HAL_UART_Receive_IT function\n");
+		 //printf("USARTLP: error while initing  HAL_UART_Receive_IT function\n");
 		 //Error_Handler(__FILE__, __LINE__);
 	 }
 
@@ -48,7 +48,7 @@ void Serial::begin(uint8_t n_uart,uint32_t baudrate){
   	HAL_UART_AbortTransmit_IT(huart);
  	 if(HAL_UART_Receive_IT(huart, (uint8_t *)aRxBuffer, RXBUFFERSIZE) != HAL_OK)
  	 {
-       printf("USART1: error while initing  HAL_UART_Receive_IT function\n");
+       //printf("USART1: error while initing  HAL_UART_Receive_IT function\n");
  	    //Error_Handler(__FILE__, __LINE__);
  	 }
 
@@ -70,7 +70,7 @@ void Serial::begin(uint8_t n_uart,uint32_t baudrate){
 
 	if(HAL_UART_Receive_IT(huart, (uint8_t *)aRxBuffer, RXBUFFERSIZE) != HAL_OK)
 	{
-		printf("USART3: error while initing  HAL_UART_Receive_IT function\n");
+		//printf("USART3: error while initing  HAL_UART_Receive_IT function\n");
 		//Error_Handler(__FILE__, __LINE__);
 	}
 
@@ -81,7 +81,7 @@ void Serial::begin(uint8_t n_uart,uint32_t baudrate){
 
  	 if(HAL_UART_Receive_IT(huart, (uint8_t *)aRxBuffer, RXBUFFERSIZE) != HAL_OK)
  	 {
-       printf("USART4: error while initing  HAL_UART_Receive_IT function\n");
+       //printf("USART4: error while initing  HAL_UART_Receive_IT function\n");
  	    //Error_Handler(__FILE__, __LINE__);
  	 }
 
@@ -90,7 +90,7 @@ void Serial::begin(uint8_t n_uart,uint32_t baudrate){
 
   /*
   char data[50];
-  sprintf(data,"uart: %d baudrate %lu \n",n_uart,baudrate);
+  s//printf(data,"uart: %d baudrate %lu \n",n_uart,baudrate);
   HAL_UART_Transmit(&huart2,(uint8_t*)data,50,100);
   */
 }
@@ -196,7 +196,7 @@ bool Serial::clear(){
 
   HAL_UART_AbortReceive_IT(huart); // this solves overflow issues
   if(HAL_UART_Receive_IT(huart, (uint8_t *)aRxBuffer, RXBUFFERSIZE) != HAL_OK){
-     printf("error while initing  HAL_UART_Receive_IT function\n");
+     //printf("error while initing  HAL_UART_Receive_IT function\n");
      //Error_Handler(__FILE__, __LINE__);
   }
 
@@ -230,7 +230,7 @@ uint16_t Serial::read(uint8_t* data, uint16_t buff_size){
 
 
   if(HAL_UART_Receive_IT(huart, (uint8_t *)aRxBuffer, RXBUFFERSIZE) != HAL_OK){
-     printf("error while initing  HAL_UART_Receive_IT function\n");
+     //printf("error while initing  HAL_UART_Receive_IT function\n");
      //Error_Handler(__FILE__, __LINE__);
   }
 
