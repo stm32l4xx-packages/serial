@@ -23,8 +23,11 @@
 ## Functionalities
 
   Multiple uart support
+
   Write and read using interrupts
+
   Dedicated rx buffer to store received data
+  
   rx buffer size can be changed editing RXBUFFERSIZE macro
 
 ## Examples
